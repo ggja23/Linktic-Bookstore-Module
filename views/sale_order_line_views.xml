@@ -1,0 +1,47 @@
+<odoo>
+    <record id="view_linktic_sale_order_line_form" model="ir.ui.view">
+        <field name="name">linktic.sale.order.line.form</field>
+        <field name="model">linktic.sale.order.line</field>
+        <field name="arch" type="xml">
+            <form string="Order Line">
+                <group>
+                    <field name="book_id"/>
+                    <field name="quantity"/>
+                    <field name="price"/>
+                    <field name="total_price" readonly="1"/>
+                    <field name="returned_quantity"/>
+                    <field name="state" readonly="1"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_linktic_sale_order_line_tree" model="ir.ui.view">
+        <field name="name">linktic.sale.order.line.tree</field>
+        <field name="model">linktic.sale.order.line</field>
+        <field name="arch" type="xml">
+            <tree string="Order Lines">
+                <field name="book_id"/>
+                <field name="quantity"/>
+                <field name="price"/>
+                <field name="total_price"/>
+                <field name="returned_quantity"/>
+                <field name="state"/>
+            </tree>
+        </field>
+    </record>
+
+        <!-- Vista Pivot CRM   -->
+    <record id="view_linktic_sale_order_line_crm_pivot" model="ir.ui.view">
+        <field name="name">linktic.sale.order.crm.pivot</field>
+        <field name="model">linktic.sale.order.line</field>
+        <field name="arch" type="xml">
+            <pivot string="Product Analysis">
+                <field name="create_date"/>
+                <field name="sale_order_id"/>
+                <field name="book_id"/>
+                <field name="customer_id"/>
+            </pivot>
+        </field>
+    </record>
+</odoo>

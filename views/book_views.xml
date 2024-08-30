@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista Form para Libros -->
+    <record id="view_form_linktic_book" model="ir.ui.view">
+        <field name="name">linktic.book.form</field>
+        <field name="model">linktic.book</field>
+        <field name="arch" type="xml">
+            <form string="Book">
+                <sheet>
+                    <group>
+                        <field name="title"/>
+                        <field name="author_id"/>
+                        <field name="published_date"/>
+                        <field name="isbn"/>
+                        <field name="price"/>
+                        <field name="quantity_in_stock"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+        <!-- Vista Tree para Libros -->
+
+    <record id="view_tree_linktic_book" model="ir.ui.view">
+        <field name="name">linktic.book.tree</field>
+        <field name="model">linktic.book</field>
+        <field name="arch" type="xml">
+            <tree string="Books">
+                <field name="title"/>
+                <field name="author_id"/>
+                <field name="published_date"/>
+                <field name="isbn"/>
+                <field name="price"/>
+                <field name="quantity_in_stock"/>
+            </tree>
+        </field>
+    </record>
+</odoo>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Vista Tree para Autores -->
+    <record id="view_tree_linktic_author" model="ir.ui.view">
+        <field name="name">linktic.author.tree</field>
+        <field name="model">linktic.author</field>
+        <field name="arch" type="xml">
+            <tree string="Authors">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista Form para Autores -->
+    <record id="view_form_linktic_author" model="ir.ui.view">
+        <field name="name">linktic.author.form</field>
+        <field name="model">linktic.author</field>
+        <field name="arch" type="xml">
+            <form string="Author">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="biography"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

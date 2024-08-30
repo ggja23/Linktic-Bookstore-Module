@@ -1,0 +1,27 @@
+<odoo>
+    <record  id="category_linktic_bookstore" model="ir.module.category">
+            <field name="description">Linktic Bookstore</field>
+            <field name="name">Linktic Bookstore</field>
+            <field name="sequence">105</field>
+    </record>
+
+    <!-- Grupo para Usuarios Internos / No administradores -->
+    <record id="group_linktic_internal_user" model="res.groups">
+        <field name="name">Internal User</field>
+        <field name="category_id" ref="category_linktic_bookstore"/>
+    </record>
+
+    <!-- Grupo para Gestores de Ventas -->
+    <record id="group_linktic_sales_manager" model="res.groups">
+        <field name="name">Sales Manager</field>
+        <field name="category_id" ref="category_linktic_bookstore"/>
+        <field name="implied_ids" eval="[(4, ref('group_linktic_internal_user'))]"/>
+    </record>
+
+    <!-- Grupo para Gestores de Inventario -->
+    <record id="group_linktic_inventory_manager" model="res.groups">
+        <field name="name">Inventory Manager</field>
+        <field name="category_id" ref="category_linktic_bookstore"/>
+        <field name="implied_ids" eval="[(4, ref('group_linktic_internal_user'))]"/>
+    </record>
+</odoo>

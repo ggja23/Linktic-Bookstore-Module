@@ -1,0 +1,30 @@
+<odoo>
+    <!-- Vista Tree para Clientes -->
+    <record id="view_tree_linktic_customer" model="ir.ui.view">
+        <field name="name">linktic.customer.tree</field>
+        <field name="model">linktic.customer</field>
+        <field name="arch" type="xml">
+            <tree string="Customers">
+                <field name="name"/>
+                <field name="customer_since"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Vista Form para Clientes -->
+    <record id="view_form_linktic_customer" model="ir.ui.view">
+        <field name="name">linktic.customer.form</field>
+        <field name="model">linktic.customer</field>
+        <field name="arch" type="xml">
+            <form string="Customer">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="contact_details"/>
+                        <field name="customer_since"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

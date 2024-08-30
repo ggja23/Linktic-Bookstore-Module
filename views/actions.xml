@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Action for Books -->
+    <record id="linktic_book_action_window" model="ir.actions.act_window">
+        <field name="name">Books</field>
+        <field name="res_model">linktic.book</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create the first book entry
+            </p>
+        </field>
+    </record>
+
+    <!-- Action for Authors -->
+    <record id="linktic_author_action_window" model="ir.actions.act_window">
+        <field name="name">Authors</field>
+        <field name="res_model">linktic.author</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create the first author entry
+            </p>
+        </field>
+    </record>
+
+    <!-- Action for Customers -->
+    <record id="linktic_customer_action_window" model="ir.actions.act_window">
+        <field name="name">Customers</field>
+        <field name="res_model">linktic.customer</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create the first customer entry
+            </p>
+        </field>
+    </record>
+
+    <!-- Action for Sale Orders -->
+    <record id="linktic_sale_ordera_action_window" model="ir.actions.act_window">
+        <field name="name">Sale Orders</field>
+        <field name="res_model">linktic.sale.order</field>
+        <field name="view_mode">tree,form,pivot</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Create the first Sale Order entry
+            </p>
+        </field>
+    </record>
+
+    <!-- Action for CRM - Sale Orders -->
+    <record id="linktic_sale_order_CRM_action_window" model="ir.actions.act_window">
+        <field name="name">CRM</field>
+        <field name="res_model">linktic.sale.order</field>
+        <field name="view_mode">pivot</field>
+    </record>
+
+    <record id="linktic_sale_order_line_CRM_action_window" model="ir.actions.act_window">
+        <field name="name">CRM</field>
+        <field name="res_model">linktic.sale.order.line</field>
+        <field name="view_mode">pivot</field>
+    </record>
+
+</odoo>

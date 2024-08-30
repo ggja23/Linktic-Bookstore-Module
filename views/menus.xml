@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Root Menu -->
+    <menuitem id="linktic_bookstore_menu_root"
+              name="Linktic Bookstore"
+              groups="group_linktic_internal_user,group_linktic_sales_manager,group_linktic_inventory_manager"
+              sequence="1"/>
+
+    <!-- Submenu: Books -->
+    <menuitem id="linktic_books_menu"
+              name="Books"
+              parent="linktic_bookstore_menu_root"
+              action="linktic_book_action_window"
+              sequence="1"/>
+
+
+
+    <!-- Submenu: Authors -->
+    <menuitem id="linktic_authors_menu"
+              name="Authors"
+              parent="linktic_bookstore_menu_root"
+              action="linktic_author_action_window"
+              sequence="2"/>
+
+
+    <!-- Submenu: Customers -->
+    <menuitem id="linktic_customers_menu"
+              name="Customers"
+              parent="linktic_bookstore_menu_root"
+              action="linktic_customer_action_window"
+              sequence="3"/>
+
+
+    <!-- Submenu: Sale Order -->
+
+    <menuitem id="linktic_sale_order_menu"
+              name="Sales Orders"
+              parent="linktic_bookstore_menu_root"
+              action="linktic_sale_ordera_action_window"/>
+
+    <!-- CRM - Sales -->
+
+    <menuitem id="linktic_sale_order_crm_menu_root"
+              name="Sale Statics"
+              parent="linktic_bookstore_menu_root"
+              action="linktic_sale_order_CRM_action_window"
+              sequence="7"/>
+
+    <menuitem id="linktic_sale_order_crm_pivot_menu"
+              name="Sale Statics"
+              parent="linktic_sale_order_crm_menu_root"
+              action="linktic_sale_order_CRM_action_window"
+              sequence="7"/>
+
+    <menuitem id="linktic_sale_order_line_crm_pivot_menu"
+              name="Produc Statics"
+              parent="linktic_sale_order_crm_menu_root"
+              action="linktic_sale_order_line_CRM_action_window"
+              sequence="8"/>
+
+    <menuitem id="linktic_dashboard_menu"
+              name="Dashboard"
+              action="linktic_dashboard_action"
+              parent="linktic_bookstore_menu_root"/>
+</odoo>
